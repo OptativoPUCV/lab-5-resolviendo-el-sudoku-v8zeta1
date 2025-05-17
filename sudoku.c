@@ -44,7 +44,41 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+    for(int k = 0 ; k < 9 ; k++) {
+      int array[10] = {0};
+      for(int i = 0 ; i < 9 ; i++) {
+        int num = n->sudo[k][i];
+        if(num != 0) {
+          if(array[num]) {
+            if(array[num]) return 0;
+            array[num] = 1;
+          }
+        }
+      }
+    }
+    for(int i = 0 ; i < 9 ; i++) {
+      int array[10] = {0};
+      for(int k = 0 ; k < 9 ; k++) {
+        int num = n->sudo[i][k];
+        if(num != 0) {
+          if(array[10])return 0;
+          array[num] = 1;
+        }
+      }
+    }
 
+    for(int k = 0 ; k < 9 ; k++) {
+      int array[10] = {0};
+      for(int p = 0 ; p < 9 ; p++) {
+        int i = 3 * (k/3) + (p/3);
+        int j = 3 * (k%3) + (p%3);
+        int num = n->sudo[i][j];
+        if(num != 0) {
+          if(array[num]) return 0;
+          array[num] = 1;
+        }
+      }
+    }
     return 1;
 }
 
