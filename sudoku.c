@@ -49,10 +49,8 @@ int is_valid(Node* n){
       for(int j = 0 ; j < 9 ; j++) {
         int num = n->sudo[i][j];
         if(num != 0) {
-          if(array[num]) {
-            if(array[num]) return 0;
-            array[num] = 1;
-          }
+          if(array[num]) return 0;
+          array[num] = 1;
         }
       }
     }
@@ -85,7 +83,7 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n) {
-    List* list=createList();
+    List* list = createList();
     int encontrado = 0;
     for(int i = 0 ; i < 9 && !encontrado ; i++) {
       for(int k = 0 ; k < 9 && !encontrado ; k++) {
