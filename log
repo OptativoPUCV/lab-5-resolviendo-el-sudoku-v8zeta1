@@ -69,3 +69,17 @@ Sat, May 17, 2025  4:49:57 AM:
  tests:  10|0
 total_score: 70/70
 d0b91c2
+Sat, May 17, 2025  4:50:32 AM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:118:3: error: expected ';' before 'while'
+   while(!is_empty(stack)) {
+   ^~~~~
+sudoku.c:140:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+d662ac4

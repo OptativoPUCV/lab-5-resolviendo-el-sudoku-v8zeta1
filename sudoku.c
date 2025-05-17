@@ -114,7 +114,7 @@ int is_final(Node* n){
 Node* DFS(Node* initial, int* cont){
   Stack* stack = createStack();
   push(stack, initial);
-  *cont = 0;
+  *cont = 0
   while(!is_empty(stack)) {
     (*cont)++;
     Node* top_node = top(stack);
