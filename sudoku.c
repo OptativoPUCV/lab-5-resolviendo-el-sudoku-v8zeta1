@@ -60,7 +60,7 @@ int is_valid(Node* n){
     for(int j = 0 ; j < 9 ; j++) {
       int array[10] = {0};
       for(int i = 0 ; i < 9 ; i++) {
-        int num = n->sudo[i][k];
+        int num = n->sudo[i][j];
         if(num != 0) {
           if(array[num]) return 0;
           array[num] = 1;
